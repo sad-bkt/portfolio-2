@@ -62,6 +62,10 @@ header {
     color: #9d999d;
 }
 
+.active {
+    color: black;
+}
+
 .menu a.current {
     color: black;
 }
