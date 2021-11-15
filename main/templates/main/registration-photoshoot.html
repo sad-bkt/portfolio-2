@@ -1,0 +1,83 @@
+{% extends 'main/template.html' %}
+
+{% block content %}
+<section class="registration-form">
+    <h1>удалить страничку</h1>
+    <h3>Форма для записи</h3>
+    <form method="post"> <!-- определить action для отправки инфо-->
+        {% csrf_token %}
+        <div>
+            <label for="nickname">Тариф*:</label>
+        </div>
+        <div>
+            {{ form.tariff }}
+        </div>
+        <div>
+            <label for="nickname">Ваше имя*:</label>
+        </div>
+        <div>
+            {{ form.name }}
+        </div>
+        <div>
+            <label for="user-email">E-mail:</label>
+        </div>
+        <div>
+            {{ form.email }}
+        </div>
+        <div>
+            <label for="phone">Номер телефона*:</label>
+        </div>
+        <div>
+            {{ form.phone }}
+        </div>
+        <div>
+            <label for="content">Комментарий:</label>
+        </div>
+        <div>
+            {{ form.comment }}
+        </div>
+        <div>
+            {{ error }}
+        </div>
+        <div>
+            <!-- <input type="submit" value="Записаться">
+            -->
+            <button type="submit">Записаться</button>
+        </div>
+    </form>
+</section>
+{% endblock %}
+
+<!--
+<form method="post"> !-- определить action для отправки инфо--
+        <div>
+            <label for="nickname">Ваше имя:</label>
+        </div>
+        <div>
+            <input type="text" id="nickname" name="nickname">
+        </div>
+        <div>
+            <label for="user-email">E-mail:</label>
+        </div>
+        <div>
+            <input type="email" id="user-email" name="user-email">
+        </div>
+        <div>
+            <label for="phone">Номер телефона:</label>
+        </div>
+        <div>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div>
+            <label for="content">Комментарий:</label>
+        </div>
+        <div>
+            <textarea rows="10" cols="50" id="content" name="content"></textarea>
+        </div>
+        <div>
+            !-- <input type="submit" value="Записаться">
+            --
+            <button type="submit">Записаться</button>
+        </div>
+    </form>
+-->

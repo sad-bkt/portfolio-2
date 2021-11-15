@@ -1,0 +1,285 @@
+body {
+    background-color: white;
+    color: #464646;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    //font-size: 25px;
+    //line-height: 1.2;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    //margin: 40px 0 5px;
+    padding: 5px 0;
+    text-align: center;
+    background: rgb(247, 248, 253);
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    align-items: center;
+}
+
+
+.menu {
+    list-style: none;
+    text-align: left;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li, .contacts, .login, .logo {
+    display: inline-block;
+    vertical-align:center;
+}
+
+.menu li:after {
+    content: "|";
+    color: #606060;
+    display: inline-block;
+    vertical-align:top;
+}
+
+.menu li:last-child:after {
+    content: none;
+}
+
+.menu a, .login {
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+    margin: 0 50px;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: color .2s;
+}
+
+.menu a, .menu a:visited, .login {
+    color: #9d999d;
+}
+
+.menu a.current, .menu a:hover, .login{
+    color: midnightblue;
+}
+
+.menu a:before, .menu a:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: auto;
+    right: 50%;
+    bottom: -5px;
+    left: 50%;
+    background: midnightblue;
+    transition: .8s;
+}
+
+.menu a:hover:before, .menu .current:before {
+    left: 0;
+}
+
+.menu a:hover:after, .menu .current:after {
+    right: 0;
+}
+
+@media (max-width: 550px) {
+    .menu {
+        padding-top: 0;
+    }
+
+    .menu li {
+        display: block;
+    }
+
+    .menu li:after {
+        content: none;
+    }
+
+    .menu a {
+        padding: 25px 0 20px;
+        margin: 0 30px;
+    }
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    //padding: 0 20px;
+    //margin: 0 20px;
+}
+
+.contacts a img {
+    max-width: 40px;
+    margin: 0 20px;
+}
+section {
+    margin: 100px 60px 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #cff3f3;
+    border-radius: 50px;
+    // box-shadow: 0 0 10px black;
+    position: absolute;
+}
+
+.section-tariffs{
+    background: -moz-default-background-color;
+}
+
+.portfolio, .registration-form, .section-tariffs, .FAQ {
+    flex-direction: column;
+}
+
+.about-me__text, .portfolio__text {
+     flex-direction: column;
+
+ }
+
+.about-me__image {
+    max-width: 40%;
+    height: 40%;
+    //border-radius: 150px;
+    padding:0;
+    font-size:0;
+}
+
+.portfolio__image {
+
+}
+
+.tariffs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tariffs__tariff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    border-color: midnightblue;
+    border-style: solid;
+}
+
+.tariffs__tariff ul {
+    list-style-image: url(https://www.freeiconspng.com/img/52);
+    list-style-position: outside;
+}
+
+.registration-form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.FAQ {
+    display: flex;
+}
+
+.FAQ table
+{
+    display: grid;
+    text-align: center;
+    margin: 5% 5%;
+    //font-size: 120%;
+    border: 1px solid black;
+}
+
+.FAQ table tr:nth-child(2n)
+{
+    background: white;
+}
+
+.FAQ th, td {
+   border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+
+
+
+/*
+a {
+    display: block;
+    color: #010440;
+    text-decoration: #010440;
+}
+
+a:hover {
+    color: #8582D9;
+    text-decoration: #8582D9;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: lightsteelblue;
+    z-index: 1;
+    /*
+
+    padding: 0 100px;
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+*/
+
+/*
+
+footer{
+    background-color: lightskyblue;
+    color: black;
+}
+h1 {
+    color: powderblue;
+}
+
+aside {
+    //width: 40%;
+    //padding-left: .10rem; // левый внутренний отступ
+    //margin-left: .10rem;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    //float: right;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > p {
+    margin: .5rem;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+footer > a {
+    color: black;
+}
+
+.img-me {
+    float: right;
+    margin: 0 50% 1em 1em;
+}
+
+*/
+
+

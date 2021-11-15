@@ -1,0 +1,50 @@
+{% extends 'main/template.html' %}
+
+{% block content %}
+<div>
+<section class="section-tariffs" id="tariffs">
+    <h3>Тарифы</h3>
+    <p>Фотостудия оплачивается отдельно</p>
+    <div class="tariffs">
+        <div class="tariffs__tariff">
+            <a href="{%  url 'registration-photoshoot' %}">Мини</a>
+            <ul>
+                <li>съемка 1 час</li>
+                <li>10 фото в ретуши на ваш выбор, 5 на мой, исходники отдаю необработанные</li>
+            </ul>
+            Цена:
+        </div>
+        <div class="tariffs__tariff">
+            <a href="{%  url 'registration-photoshoot' %}">Базовый</a>
+            <ul>
+                <li>съемка 2 часа</li>
+                <li>30 фото в ретуши на ваш выбор, исходники отдаю необработанные</li>
+            </ul>
+            Цена:
+        </div>
+        <div class="tariffs__tariff">
+            <a href="{%  url 'registration-photoshoot' %}">Макси</a>
+            <ul>
+                <li>продолжительность съемки договорная</li>
+                <li>15 фото в ретуши, исходники отдаю необработанные</li>
+            </ul>
+            Цена:
+        </div>
+    </div>
+</section>
+</div>
+
+<div>
+<section class="registration-form">
+    <h3>Форма для записи</h3>
+    <form method="post"> <!-- определить action для отправки инфо-->
+        {% csrf_token %}
+        {% for i in form %}
+            <p><label class="form-label" for="{{ i.id_for_label }}">{{ i.label }}: </label> {{ i }} </p>
+            <div class="form-error">{{ i.errors }}</div>
+        {% endfor %}
+        <button type="submit">Записаться</button>
+    </form>
+</section>
+</div>
+{% endblock %}

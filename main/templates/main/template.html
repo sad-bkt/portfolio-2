@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Определяет соотношение между шириной устройства и размером области просмотра -->
+    <meta name="author" content="Semina Anastasiia">
+    <title>Портфолио</title>
+    <meta name="keywords" content="фотограф, СПб, Питер, Санкт-Петербург, портфолио, съемка, портрет">
+    <meta name="description" content="Фотограф Семина Анастасия. Провожу портретные съемки на улице и в студии.">
+    <link rel="shortcut icon" href="../../static/img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+<header>
+    <a class="logo" href="/"><img src="{% static 'img/logo.png' %}" height="50px"></a>
+    <nav role="navigation" class="menu">
+        <ul>
+            <li><a href="{%  url 'home' %}">Обо мне</a></li>
+            <li><a href="{%  url 'portfolio' %}">Портфолио & Отзывы</a></li>
+            <li><a href="{%  url 'tariffs' %}">Тарифы</a></li>
+            <li><a href="{%  url 'FAQ' %}">FAQ</a></li>
+        </ul>
+    </nav>
+    <div class="contacts">
+        <a href="https://www.instagram.com/sad.bkt.ph" target="_blank"><img src="../../static/img/instagram.png" alt="инстаграм"></a>
+        <a href="https://t.me/sad_bkt" target="_blank"><img src="../../static/img/telegram.png" alt="телеграм"></a>
+    </div>
+    <a class="login" href="#">Вход</a>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+</footer>
+</body>
+</html>
