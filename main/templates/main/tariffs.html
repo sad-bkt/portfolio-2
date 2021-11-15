@@ -1,7 +1,7 @@
 {% extends 'main/template.html' %}
 
 {% block content %}
-<div class = "tariffs__forms">
+
 <section class="section-tariffs" id="tariffs">
     <h3>Тарифы</h3>
     <p>Фотостудия оплачивается отдельно</p>
@@ -31,9 +31,8 @@
             Цена:
         </div>
     </div>
-</section>
 
-<section class="registration-form">
+    <div class="registration-form">
     <h3>Форма для записи</h3>
     <form method="post"> <!-- определить action для отправки инфо-->
         {% csrf_token %}
@@ -43,6 +42,7 @@
         {% endfor %}
         <button type="submit">Записаться</button>
     </form>
-</section>
 </div>
+</section>
+
 {% endblock %}
