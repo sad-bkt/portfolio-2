@@ -128,6 +128,12 @@ section {
     position: absolute;
 }
 
+.tariffs__forms {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .section-tariffs{
     background: -moz-default-background-color;
 }
