@@ -62,7 +62,11 @@ header {
     color: #9d999d;
 }
 
-.menu a.current, .menu a:hover, .login{
+.menu a.current {
+    color: black;
+}
+
+.menu a:hover, .login{
     color: midnightblue;
 }
 
