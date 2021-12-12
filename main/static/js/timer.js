@@ -4,8 +4,8 @@
     window.addEventListener('load', () => {
         const loadTime = Date.now() - launchTimestamp;
         const newElement = document.createElement('section');
-        // newElement.classList.add('page-block');
+        // newElement.classList.add('class-name');
         newElement.innerHTML = `<div>Страница загрузилась за ${loadTime} миллисекунд</div>`
-        document.querySelector('section').insertAdjacentElement('afterend', newElement);
+        document.querySelector('section').insertAdjacentElement('beforebegin', newElement);
     })
 })()
