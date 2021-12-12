@@ -13,11 +13,7 @@
 */
 window.addEventListener('load', function() {
     let menu = document.getElementsByClassName("menu-a");
-    // let menu = header.getElementsByTagName("a");
-    console.log(menu)
-    console.log("sad")
     for (let i = 0; i < menu.length; i++) {
-        console.log(menu[i].href)
         if (menu[i].href === window.location.href) {
             menu[i].classList.add("active");
         }
