@@ -68,7 +68,7 @@ header {
     color: #9d999d;
 }
 
-menu a:active {
+.active {
     border-bottom: 4px solid black;
 }
 
