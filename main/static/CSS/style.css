@@ -119,12 +119,6 @@ header {
     }
 }
 
-@media only screen and (max-width: 500px) {
-    section {
-        display: none;
-    }
-}
-
 .contacts {
     display: flex;
     justify-content: space-around;
@@ -159,6 +153,12 @@ section {
     border-radius: 50px;
     // box-shadow: 0 0 10px black;
     // position: absolute;
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        display: none;
+    }
 }
 
 .tariffs__forms {
@@ -235,6 +235,7 @@ section {
     text-align: center;
     margin: 5% 5%;
     //font-size: 120%;
+    width: 50%;
     border: 1px solid black;
 }
 
@@ -251,10 +252,6 @@ section {
    border: 1px solid black;
     border-collapse: collapse;
 }
-
-
-
-
 
 /*
 a {
