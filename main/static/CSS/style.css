@@ -231,11 +231,11 @@ section {
 
 .FAQ table
 {
-    display: grid;
+    //display: grid;
     text-align: center;
     margin: 5% 5%;
     //font-size: 120%;
-    width: 50%;
+    width: 80%;
     border: 1px solid black;
     border-collapse: collapse;
     table-layout: fixed;
@@ -252,6 +252,8 @@ section {
 
 .FAQ th, td {
     border: 1px solid black;
+    padding: 10px;
+    text-align: center;
 }
 
 /*
