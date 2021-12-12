@@ -68,8 +68,8 @@ header {
     color: #9d999d;
 }
 
-.active {
-    color: black;
+menu a:active {
+    border-bottom: 4px solid black;
 }
 
 .menu a.current {
