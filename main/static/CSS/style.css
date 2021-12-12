@@ -233,7 +233,6 @@ section {
 {
     //display: grid;
     text-align: center;
-    margin: 5% 5%;
     //font-size: 120%;
     width: 80%;
     border: 1px solid black;
@@ -248,6 +247,7 @@ section {
 
 .FAQ table caption {
     font-style: italic;
+    padding: 10px;
 }
 
 .FAQ th, td {
