@@ -219,7 +219,7 @@ section {
     align-items: center;
 }
 
-.FAQ {
+.FAQ, .question {
     display: flex;
 }
 

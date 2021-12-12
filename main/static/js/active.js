@@ -1,16 +1,16 @@
-/*$(function(){
+$(function(){
     // this will get the full URL at the address bar
     var url = window.location.href;
 
     // passes on every "a" tag
-    $("#sub-header a").each(function() {
+    $(".menu a").each(function() {
             // checks if its the same on the address bar
         if(url == (this.href)) {
-            $(this).closest("li").addClass("active");
+            $(this).addClass("active");
         }
     });
 });
-*/
+/*
 window.addEventListener('load', function() {
     let header = document.getElementById("header");
     let menu = header.getElementsByTagName("a");
@@ -20,3 +20,5 @@ window.addEventListener('load', function() {
         }
     }
 });
+
+ */
