@@ -12,8 +12,8 @@
 });
 */
 window.addEventListener('load', function() {
-    let header = document.getElementById("header");
-    let menu = header.getElementsByTagName("a");
+    let menu = document.getElementsByClassName("menu-a");
+    // let menu = header.getElementsByTagName("a");
     console.log(menu)
     console.log("sad")
     for (let i = 0; i < menu.length; i++) {
