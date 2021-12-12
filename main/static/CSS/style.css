@@ -237,6 +237,8 @@ section {
     //font-size: 120%;
     width: 50%;
     border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
 }
 
 .FAQ table tr:nth-child(2n)
@@ -249,8 +251,7 @@ section {
 }
 
 .FAQ th, td {
-   border: 1px solid black;
-    border-collapse: collapse;
+    border: 1px solid black;
 }
 
 /*
