@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
     // this will get the full URL at the address bar
     var url = window.location.href;
 
@@ -10,15 +10,16 @@ $(function(){
         }
     });
 });
-/*
+*/
 window.addEventListener('load', function() {
     let header = document.getElementById("header");
     let menu = header.getElementsByTagName("a");
+    console.log(menu)
+    console.log("sad")
     for (let i = 0; i < menu.length; i++) {
+        console.log(menu[i].href)
         if (menu[i].href === window.location.href) {
             menu[i].classList.add("active");
         }
     }
 });
-
- */
