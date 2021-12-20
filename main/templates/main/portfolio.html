@@ -10,6 +10,11 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
     <!-- end carousel framework-->
 
+    <!-- Required Core stylesheet -->
+    <link rel="stylesheet" type="text/css" href={% static "@glidejs/glide/dist/css/glide.core.min.css" %}>
+
+    <!-- Optional Theme stylesheet -->
+    <link rel="stylesheet" type="text/css" href={% static "@glidejs/glide/dist/css/glide.theme.min.css" %}>
     <!-- <script type="text/javascript" src={% static "js/carousel.js" %}></script> -->
 {% endblock %}
 
@@ -40,5 +45,38 @@
             <img src="../../static/img/rita1.jpg" alt="rita">
             <img src="../../static/img/ksu1.jpg" alt="ksu">
             <img src="../../static/img/anton1.jpg" alt="anton">
-        </div>
+    </div>
+
+
+    <div class="glide">
+  <div data-glide-el="track" class="glide__track">
+    <ul class="glide__slides">
+      <li class="glide__slide"></li>
+      <li class="glide__slide"></li>
+      <li class="glide__slide"></li>
+    </ul>
+  </div>
+</div>
+
+      <script>
+      import Glide from '../../static/@glidejs/glide'
+    document.addEventListener('DOMContentLoaded', function (event) {
+      var glide = new Glide('#intro', {
+  type: 'carousel',
+  perView: 4,
+  focusAt: 'center',
+  breakpoints: {
+    800: {
+      perView: 2
+    },
+    480: {
+      perView: 1
+    }
+  }
+})
+
+glide.mount()
+
+    })
+  </script>
 {% endblock %}
