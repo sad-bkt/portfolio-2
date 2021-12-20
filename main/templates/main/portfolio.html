@@ -3,8 +3,8 @@
 
 {% block scripts %}
     <!-- for carousel framework-->
-    <link rel="stylesheet" type="text/css" href="{% static 'CSS/flickity.min.css' %}" />
-    <script type="text/javascript" src={% static "js/flickity.pkgd.min.js" %}></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/flickity.css' %}" />
+    <script type="text/javascript" src={% static "js/flickity.pkgd.js" %}></script>
     <!--
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
@@ -33,4 +33,21 @@
             <img src="../../static/img/anton1.jpg" alt="anton">
         </div>
 </section>
+
+    <div class="carousel"
+       data-flickity='{ "lazyLoad": true }'>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="../../static/img/julia1.jpg" alt="julia" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="../../static/img/lidia1.jpg" alt="lidia" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="../../static/img/rita1.jpg" alt="rita" />
+      </div>
+    </div>
+
 {% endblock %}
