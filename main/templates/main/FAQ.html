@@ -1,5 +1,9 @@
 {% extends 'main/template.html' %}
 
+{% block scripts %}
+    <script type="text/javascript" src={% static "js/question.js" %}></script>
+{% endblock %}
+
 {% block content %}
 <section class="FAQ" id="FAQ">
     <h3>Тык</h3>
@@ -21,12 +25,13 @@
 </section>
 <section class="question">
     <h3>Добавьте свой вопрос</h3>
-    <form class="question-form">
+    <form onsubmit="return false" class="question-form">
         <input type="text" class="question-form__input" placeholder="Ваш вопрос" autocomplete="off">
-        <button class="question-form__button">Отправить</button>
+        <button onsubmit="enter()" class="question-form__button">Отправить</button>
     </form>
     <div>
-
+        <button onsubmit="upload()" class="question-form__button">Скачать</button>
+        <button onsubmit="clear()" class="question-form__button">Очистить</button>
     </div>
 </section>
 {% endblock %}

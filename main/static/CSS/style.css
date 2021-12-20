@@ -256,6 +256,17 @@ section {
     text-align: center;
 }
 
+.carousel {
+  background: #EEE;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  display: block;
+  height: 200px;
+  box-sizing: border-box;
+}
+
 /*
 a {
     display: block;
