@@ -10,7 +10,7 @@ class Photoshoot(models.Model):
     email = models.EmailField('E-mail', max_length=50, null=True, blank=True)
     phone = models.CharField('Номер телефона', max_length=50)
 
-    tariff = models.CharField('Название тарифа', choices=TARIFFS, max_length=50)
+    tariff = models.CharField('Название тарифа', choices=TARIFFS, max_length=50, default="middle")
     date = models.DateTimeField('Время', null=True, blank=True)
     place = models.CharField('Место', max_length=50, blank=True)
     comment = models.TextField('Комментарий', blank=True)

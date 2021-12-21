@@ -20,7 +20,6 @@ class PhotoshootForm(forms.ModelForm):
         fields = ["tariff", "name", "email", "phone", "date", "place", "comment"]
         widgets = {
             "tariff": forms.RadioSelect(attrs={
-                'type': 'radio',
                 'id': 'tariff',
                 'name': 'tariff'
             }, choices=TARIFFS),
