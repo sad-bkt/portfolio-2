@@ -3,15 +3,17 @@ from .models import Photoshoot, TARIFFS
 # from django.forms import ModelForm, TextInput, Textarea, SelectMultiple
 from django import forms
 
-class PhotoshootForm(forms.ModelForm):
 
-    tariff = forms.ChoiceField(label="Тариф")
-    name = forms.CharField(label="Имя")
-    email = forms.CharField(label="E-mail", required=False)
-    phone = forms.CharField(label="Телефон")
-    date = forms.CharField(label="Дата съемки", required=False)
-    place = forms.CharField(label="Место съемки", required=False)
-    comment = forms.Field(label="Комментарий", required=False)
+class PhotoshootForm(forms.ModelForm):
+    '''
+        tariff = forms.ChoiceField(label="Тариф")
+        name = forms.CharField(label="Имя")
+        email = forms.CharField(label="E-mail", required=False)
+        phone = forms.CharField(label="Телефон")
+        date = forms.CharField(label="Дата съемки", required=False)
+        place = forms.CharField(label="Место съемки", required=False)
+        comment = forms.Field(label="Комментарий", required=False)
+    '''
 
     class Meta:
         model = Photoshoot
