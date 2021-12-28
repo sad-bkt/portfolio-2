@@ -1,6 +1,8 @@
-    let restore = ['сменная обувь', 'косметика', 'кошька'];
-    localStorage.setItem('task', JSON.stringify(restore));
-    write();
+    window.addEventListener('DOMContentLoaded', function() {
+        let restore = ['сменная обувь', 'косметика', 'кошька'];
+        localStorage.setItem('task', JSON.stringify(restore));
+        write();
+    });
 
     function read() {
         let restore = JSON.parse(localStorage.getItem('task'));
