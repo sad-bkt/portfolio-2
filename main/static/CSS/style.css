@@ -281,6 +281,7 @@ input:checked + label{
 .carousel {
   background: #EEE;
   box-sizing: border-box;
+  width: 50%;
 }
 
 .carousel img {
