@@ -257,7 +257,7 @@ section {
     justify-content: space-between;
 }
 
-.comments {
+#comments {
     align-items: center;
 }
 
