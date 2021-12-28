@@ -226,7 +226,7 @@ section {
     align-items: center;
 }
 
-.FAQ, .tasks, .comments, .comment {
+.FAQ, .tasks, .comments, .comment, .feedback {
     display: flex;
     flex-direction: column;
 }
@@ -266,6 +266,19 @@ section {
   border-radius: 7px;
   width: 100%;
   justify-content: space-between;
+}
+
+.comment {
+  width: 80%;
+}
+
+.comment__name {
+    font-weight: 700;
+}
+
+.comment__email {
+    text-decoration:underline;
+    color: darkblue;
 }
 
 .task lable{

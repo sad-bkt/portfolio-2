@@ -17,10 +17,8 @@ window.addEventListener('DOMContentLoaded', async function loadComments() {
             const newComment = document.createElement("div");
             newComment.classList.add('comment');
             newComment.innerHTML =
-                `<div class="comment__author">
-                <div class="comment__name">${comment['name']}</div>
+                `<div class="comment__name">${comment['name']}</div>
                 <div class="comment__email">${comment['email']}</div>
-                </div>
                 <div class="comment__content">${comment['body']}</div>`;
             container.appendChild(newComment)
         });
