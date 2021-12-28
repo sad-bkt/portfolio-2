@@ -4,7 +4,7 @@
 
     function read() {
         let restore = JSON.parse(localStorage.getItem('task'));
-        if (restore== null) {
+        if (restore == null) {
             restore = [];
         }
       return restore
@@ -20,7 +20,7 @@
                 i +
                 ')" class="task_button_delete">Удалить</button></div>';
         }
-        document.getElementById("task_list").innerHTML= output;
+        document.getElementById("task_list").innerHTML = output;
     }
 
     function delete_it(i) {

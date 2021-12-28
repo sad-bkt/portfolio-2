@@ -226,7 +226,7 @@ section {
     align-items: center;
 }
 
-.FAQ, .task {
+.FAQ, .tasks {
     display: flex;
     flex-direction: column;
 }
