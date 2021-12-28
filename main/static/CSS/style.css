@@ -279,9 +279,10 @@ input:checked + label{
 }
 
 .carousel {
-  background: #EEE;
+  background: #cff3f3;
   box-sizing: border-box;
   width: 80%;
+  margin-bottom:40px
 }
 
 .carousel img {
