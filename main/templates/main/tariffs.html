@@ -33,8 +33,7 @@
     </div>
 </section>
 
-<section>
-    <div class="registration-form">
+<section class="registration-form">
     <h3>Форма для записи</h3>
     <form method="post"> <!-- определить action для отправки инфо-->
         {% csrf_token %}
@@ -44,7 +43,6 @@
         {% endfor %}
         <button type="submit">Записаться</button>
     </form>
-</div>
 </section>
 
 {% endblock %}
