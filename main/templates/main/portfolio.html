@@ -15,8 +15,8 @@
 
 {% block content %}
 <section class="portfolio" id="portfolio">
-        <h3 class="portfolio__text">Примеры работ</h3>
-
+    <h3 class="portfolio__text">Примеры работ</h3>
+<!--
         <div class="=portfolio__image">
             <img src="../../static/img/julia1.jpg" width="200px" align="left" alt="julia">
             <img src="../../static/img/lidia1.jpg" width="200px" align=”middle” border=”25px” alt="lidia">
@@ -25,16 +25,16 @@
             <img src="../../static/img/anton1.jpg" width="300px" align=”right” alt="anton">
         </div>
 </section>
-<!--
-        <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
-            <img src="../../static/img/julia1.jpg" alt="julia">
-            <img src="../../static/img/lidia1.jpg" alt="lidia">
-            <img src="../../static/img/rita1.jpg" alt="rita">
-            <img src="../../static/img/ksu1.jpg" alt="ksu">
-            <img src="../../static/img/anton1.jpg" alt="anton">
-        </div>
+-->
+    <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
+        <img src="../../static/img/julia1.jpg" alt="julia">
+        <img src="../../static/img/lidia1.jpg" alt="lidia">
+        <img src="../../static/img/rita1.jpg" alt="rita">
+        <img src="../../static/img/ksu1.jpg" alt="ksu">
+        <img src="../../static/img/anton1.jpg" alt="anton">
+    </div>
 
-
+</section>
     <div class="carousel"
        data-flickity='{ "lazyLoad": true }'>
       <div class="carousel-cell">
@@ -50,5 +50,4 @@
           data-flickity-lazyload="../../static/img/rita1.jpg" alt="rita" />
       </div>
     </div>
--->
 {% endblock %}

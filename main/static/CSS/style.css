@@ -273,7 +273,11 @@ section {
   column-gap: 10px;
 }
 
-/*
+input:checked + label{
+  opacity:50%;
+  text-decoration:line-through;
+}
+
 .carousel {
   background: #EEE;
   box-sizing: border-box;
@@ -284,7 +288,7 @@ section {
   height: 200px;
   box-sizing: border-box;
 }
-*/
+
 /*
 a {
     display: block;
