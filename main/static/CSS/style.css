@@ -226,7 +226,7 @@ section {
     align-items: center;
 }
 
-.FAQ, .tasks {
+.FAQ, .tasks, .comments, .comment {
     display: flex;
     flex-direction: column;
 }
@@ -258,7 +258,7 @@ section {
     text-align: center;
 }
 
-.task {
+.task, .comment {
   background:white;
   margin: 7px;
   padding: 5px;
