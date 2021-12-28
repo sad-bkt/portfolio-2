@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block scripts %}
-    <script type="text/javascript" src={% static "js/question.js" %}></script>
+    <script type="text/javascript" src={% static "js/task.js" %}></script>
 {% endblock %}
 
 {% block content %}
@@ -24,15 +24,13 @@
        </tr>
     </table>
 </section>
-<section class="question">
-    <h3>Добавьте свой вопрос</h3>
-    <form onsubmit="return false" class="question-form">
-        <input type="text" class="question-form__input" placeholder="Ваш вопрос" autocomplete="off">
-        <button onsubmit="enter()" class="question-form__button">Отправить</button>
+<section class="task">
+    <h3>Добавьте список того, что нужно взять на съемку:</h3>
+    <form onsubmit="return false" class="task-form">
+        <input type="text" class="task_input" id="task_input" placeholder="Что еще?" autocomplete="off">
+        <button onclick="add(); this.form.reset();" class="task_button_add">Добавить</button>
+        <button onclick="clear_all();" class="task_button_clear">Очистить</button>
     </form>
-    <div>
-        <button onsubmit="upload()" class="question-form__button">Скачать</button>
-        <button onsubmit="clear()" class="question-form__button">Очистить</button>
-    </div>
+    <p id="task_list"></p>
 </section>
 {% endblock %}
