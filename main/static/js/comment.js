@@ -2,16 +2,10 @@ window.addEventListener('DOMContentLoaded', async function loadComments() {
     const container = document.getElementById('comments');
     let comments = []
 
-    function getRandomInRange(min, max) {
-        return Math.floor(Math.random() * (max - min )) + min;
-    }
-
+    const randomId = Math.floor(Math.random() * 100 + 1);
     try {
-        let response = await fetch('https://jsonplaceholder.typicode.com/comments')
+        let response = await fetch(`https://jsonplaceholder.typicode.com/posts/${randomId}/comments`)
         comments = await response.json();
-        comments = comments.filter(function (item, index, array) {
-            return (item.id % getRandomInRange(10, 100) === 0);
-        });
 
         comments.forEach(comment => {
             const newComment = document.createElement("div");
