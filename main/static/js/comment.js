@@ -16,10 +16,12 @@ window.addEventListener('DOMContentLoaded', async function loadComments() {
         comments.forEach(comment => {
             const newComment = document.createElement("div");
             newComment.classList.add('comment');
-            newComment.innerHTML =
-                `<div class="comment__name">${comment['name']}</div>
-                <div class="comment__email">${comment['email']}</div>
-                <div class="comment__content">${comment['body']}</div>`;
+            let template = document.querySelector('#temp');
+            let div = template.content.querySelectorAll("div");
+            div[0].textContent = comment['name'];
+            div[1].textContent = comment['email'];
+            div[2].textContent = comment['body'];
+            newComment.innerHTML = template.content;
             container.appendChild(newComment)
         });
     } catch (e) {
