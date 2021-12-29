@@ -17,7 +17,11 @@ function read() {
 
 function write() {
     let restore = read();
-    let output = "";
+    // let output = "";
+    let container = document.getElementById("task_list");
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
     for(let i = 0; i < restore.length; i++) {
         let template = document.querySelector('#temp');
         let clone = template.content.cloneNode(true);
@@ -27,9 +31,11 @@ function write() {
         button[0].addEventListener("click", function () {
                 delete_it(i);
             });
-        output += clone;
+        // output += clone;
+        document.getElementById("task_list").appendChild(clone);
     }
-    document.getElementById("task_list").innerHTML = output;
+
+    // innerHTML = output;
 }
 
 function delete_it(i) {
