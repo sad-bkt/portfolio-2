@@ -1,4 +1,5 @@
-var flkty = new Flickity( '.carousel', {
+var elem = document.querySelector('.carousel');
+var flkty = new Flickity( elem, {
 
     imagesLoaded: true,
     // Unloaded images have no size, which can throw off cell

@@ -17,6 +17,7 @@ function read() {
 
 function write() {
     let restore = read();
+    let output = "";
     for(let i = 0; i < restore.length; i++) {
         let template = document.querySelector('#temp');
         let clone = template.content.cloneNode(true);
@@ -26,9 +27,9 @@ function write() {
         button[0].addEventListener("click", function () {
                 delete_it(i);
             });
-        document.getElementById("task_list").appendChild(clone);
+        output += clone;
     }
-
+    document.getElementById("task_list").innerHTML = output;
 }
 
 function delete_it(i) {
