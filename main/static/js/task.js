@@ -17,19 +17,18 @@ function read() {
 
 function write() {
     let restore = read();
-    let output = "";
     for(let i = 0; i < restore.length; i++) {
         let template = document.querySelector('#temp');
-        var clone = template.content.cloneNode(true);
+        let clone = template.content.cloneNode(true);
         let label = clone.querySelectorAll("label");
         label[0].textContent = restore[i];
         let button = clone.querySelectorAll("button");
         button[0].addEventListener("click", function () {
                 delete_it(i);
             });
-        output += template.content;
+        document.getElementById("task_list").appendChild(clone);
     }
-    document.getElementById("task_list").innerHTML = output;
+
 }
 
 function delete_it(i) {
