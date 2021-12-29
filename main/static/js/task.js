@@ -20,9 +20,10 @@ function write() {
     let output = "";
     for(let i = 0; i < restore.length; i++) {
         let template = document.querySelector('#temp');
-        let label = template.content.querySelectorAll("label");
+        var clone = template.content.cloneNode(true);
+        let label = clone.querySelectorAll("label");
         label[0].textContent = restore[i];
-        let button = template.content.querySelectorAll("button");
+        let button = clone.querySelectorAll("button");
         button[0].addEventListener("click", function () {
                 delete_it(i);
             });

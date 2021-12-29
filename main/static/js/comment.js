@@ -17,12 +17,13 @@ window.addEventListener('DOMContentLoaded', async function loadComments() {
             const newComment = document.createElement("div");
             newComment.classList.add('comment');
             let template = document.querySelector('#temp');
-            let div = template.content.querySelectorAll("div");
+            let clone = template.content.cloneNode(true);
+            let div = clone.querySelectorAll("div");
             div[0].textContent = comment['name'];
             div[1].textContent = comment['email'];
             div[2].textContent = comment['body'];
-            newComment.innerHTML = template.content;
-            container.appendChild(newComment)
+            newComment.appendChild(clone);
+            container.appendChild(newComment);
         });
     } catch (e) {
         const message = document.createElement("p")
